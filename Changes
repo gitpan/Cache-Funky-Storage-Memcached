@@ -1,5 +1,8 @@
 Revision history for Cache-Funky-Storage-Memcached
 
+0.03    2007-05-20/15:00
+        - Add SYNOPSYS
+
 0.02    2007-05-20/10:34
         - Fix Package name Type. Funcky to Funky... 
 

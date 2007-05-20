@@ -5,7 +5,7 @@ use strict;
 use base qw/Cache::Funky::Storage/;
 use Cache::Memcached;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my $class = shift;
@@ -52,6 +52,33 @@ Cache::Funky::Storage::Memcached - Cache::Funky  Memcached Storage.
 =head1 DESCRIPTION
 
 Memcached Storage for L<Cache::Funky>
+
+=head1 SYNOPSYS
+
+  package MyCache;
+  
+  use strict;
+  use Cache::Memcached;
+  use base qw/Cache::Funky/;
+  
+  __PACKAGE__->setup('Storage::Memcached' => { servers => [ '127.0.0.1:12345' ] });
+  __PACKAGE__->register( 'foo', sub { time } );
+  
+  1;
+
+run.pl
+  #!/usr/bin/perl
+  
+  use strict;
+  use MyCache;
+  use Perl6::Say;
+  
+  say ( MyCache->foo() );
+  sleep(3);
+  say ( MyCache->foo() );
+  
+  MyCache->delete(qw/foo/);
+  say ( MyCache->foo() );
 
 =head1 METHOD
 
