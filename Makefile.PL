@@ -11,7 +11,7 @@ WriteMakefile(
     PREREQ_PM => {
         'Test::More'             => 0,
         'Cache::Memcached'       => 0,
-        'Cache::Funky'          => 0,
+        'Cache::Funky'          => 0.06,
         'Cache::Funky::Storage' => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },

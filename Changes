@@ -1,5 +1,8 @@
 Revision history for Cache-Funky-Storage-Memcached
 
+0.04    2007-10-14/10:34
+        - Update for Cache::Funky version 0.06
+
 0.03    2007-05-20/15:00
         - Add SYNOPSYS
 
