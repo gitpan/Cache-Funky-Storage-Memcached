@@ -5,7 +5,7 @@ use strict;
 use base qw/Cache::Funky::Storage/;
 use Cache::Memcached;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub new {
     my $class = shift;
@@ -62,7 +62,7 @@ Cache::Funky::Storage::Memcached - Cache::Funky  Memcached Storage.
 
 Memcached Storage for L<Cache::Funky>
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
   package MyCache;
   
@@ -77,6 +77,7 @@ Memcached Storage for L<Cache::Funky>
   1;
 
 run.pl
+
   #!/usr/bin/perl
   
   use strict;
@@ -121,5 +122,11 @@ L<Cache::Funky>
 =head1 AUTHOR
 
 Tomohiro Teranishi <tomohiro.teranishi@gmail.com>
+
+=head1 COPYRIGHT AND LISENCE
+
+Copyright (c) Tomohiro Teranishi, All rights reserved.
+
+This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.  See L<perlartistic>.
 
 =cut

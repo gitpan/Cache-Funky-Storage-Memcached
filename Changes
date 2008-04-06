@@ -1,5 +1,9 @@
 Revision history for Cache-Funky-Storage-Memcached
 
+0.05    2008-04-06/11:21
+        - using Module::Install
+        - FIX typo
+
 0.04    2007-10-14/10:34
         - Update for Cache::Funky version 0.06
 
