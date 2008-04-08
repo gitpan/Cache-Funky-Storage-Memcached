@@ -9,6 +9,7 @@ requires 'Test::More'            => 0;
 requires 'Cache::Memcached'      => 0;
 requires 'Cache::Funky'          => 0;
 requires 'Cache::Funky::Storage' => 0;
+requires 'Test::Spelling'        => 0;
 license 'perl';
 auto_install;
 WriteAll;

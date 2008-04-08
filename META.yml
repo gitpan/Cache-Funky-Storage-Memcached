@@ -13,4 +13,5 @@ requires:
   Cache::Funky::Storage: 0
   Cache::Memcached: 0
   Test::More: 0
-version: 0.05
+  Test::Spelling: 0
+version: 0.07

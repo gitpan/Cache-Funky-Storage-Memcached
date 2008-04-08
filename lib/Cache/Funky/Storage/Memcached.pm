@@ -5,16 +5,16 @@ use strict;
 use base qw/Cache::Funky::Storage/;
 use Cache::Memcached;
 
-our $VERSION = '0.05';
+our $VERSION = '0.07';
 
 sub new {
     my $class = shift;
     my $args  = shift;
 
     my $s = {};
-    $s->{memcached} = Cache::Memcached->new( $args ) ;
+    $s->{memcached} = Cache::Memcached->new($args);
 
-    return bless $s ,$class;
+    return bless $s, $class;
 }
 
 sub set {
@@ -23,34 +23,33 @@ sub set {
     my $value = shift;
     my $id    = shift;
 
-    $key = $id ? $key . ':' . $id : $key ;
+    $key = $id ? $key . ':' . $id : $key;
 
-    $s->{memcached}->set( $key , $value );
+    $s->{memcached}->set( $key, $value );
 
     return;
 }
 
 sub get {
-    my $s     = shift;
-    my $key   = shift;
-    my $id    = shift;
+    my $s   = shift;
+    my $key = shift;
+    my $id  = shift;
 
-    $key = $id ? $key . ':' . $id : $key ;
+    $key = $id ? $key . ':' . $id : $key;
 
-    return $s->{memcached}->get( $key );
+    return $s->{memcached}->get($key);
 
 }
 
 sub delete {
-    my $s     = shift;
-    my $key   = shift;
-    my $id    = shift;
+    my $s   = shift;
+    my $key = shift;
+    my $id  = shift;
 
-    $key = $id ? $key . ':' . $id : $key ;
+    $key = $id ? $key . ':' . $id : $key;
 
-    $s->{memcached}->delete( $key );
+    $s->{memcached}->delete($key);
 }
-
 
 1;
 
@@ -123,7 +122,7 @@ L<Cache::Funky>
 
 Tomohiro Teranishi <tomohiro.teranishi@gmail.com>
 
-=head1 COPYRIGHT AND LISENCE
+=head1 COPYRIGHT AND LICENSE 
 
 Copyright (c) Tomohiro Teranishi, All rights reserved.
 
